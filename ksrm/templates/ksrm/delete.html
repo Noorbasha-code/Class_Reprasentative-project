@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+		
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body style="background-color: orange">
+	<form action="{% url 'delete' data.id %}" method="POST">
+		{%csrf_token %}
+		<h1 style="text-align: center;color: red">    Are u sure to delete {{ data.name }} </h1>
+		<a href="{% url 'display'  %}" class="btn btn-primary">cancel </a>
+		<button type="submit" class="btn btn-success" >Conform </button>
+</body>
+</html>

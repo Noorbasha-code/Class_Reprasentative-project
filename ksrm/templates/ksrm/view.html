@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Profile information</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<center>
+<body style="text-align: center;color: red;background-color: orange"><b>
+
+
+ <<div class="col-sm-6">
+	<div class="card">
+		<div class="card-header bg-success">
+			<h4>Profile Info</h4>
+		</div>
+		<div class="card-body">
+			<table border="1" class="table table-dark">
+	<tr><th >Id</th><td>{{ data.id }}</td></tr>
+	<tr><th>Full Name</th><td>{{ data.name}}</td></tr>
+	<tr><th>Roll No</th><td>{{ data.rollno }}</td></tr>
+	<tr><th>Subject</th><td>{{ data.subject }}</td></tr>
+	<tr><th>No_of_copies</th><td>{{ data.no_of_copies }}</td></tr>
+	<tr><th>Branch</th><td>{{ data.branch }}</td></tr>
+</table>
+<div class="container">
+  <h5> MATERIAL INPUTTING FORMAT </h5>
+  <p>KANDULA SRINIVASAREDDY MEMORIAL COLLEGE OF ENGINEERING</p><br>
+  <p>				KADAPA			</p>            
+  <img src='{% static "images/unnamed.jpg" class="rounded" alt="Cinque Terre"  %}'
+  width="50" height="50"> 
+</div>
+		</div>
+	</div>
+</div>
+
+</body></b>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Display</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+		
+	
+	<link rel="shortcut icon" type="image/x-icon" href="C:\Users\basha\Desktop\HTML\Bussiness_Website\Browse_Icon.png">
+</head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<body style="background-color: orange">
+	<h1 style="text-align: center;color: rgba();"><b>Copies_Enrollement_List</h1></b>
+
+ <table border="3 " align="center">
+ 	<tr>
+ 	 	<th style="color: red"><b>Name</th></b>
+ 		<th style="color: red"><b>Rollno</th></b>
+ 		<th style="color: red" ><b>View</th></b>
+ 		<th style="color: red"><b>Update</th></b>
+ 		<th style="color: red"><b>delete</th></b>
+ 	</tr>
+ 	{% for i in data %}
+ 	<tr>
+ 		<td>{{ i.name }}</td>
+ 		<td>{{ i.rollno }}</td>
+ 		<td><a href="{% url 'view' i.id %}"  class="btn btn-primary" >view</a></td>
+		<td><a href="{% url 'update' i.id %}" class="btn btn-success">Update</a></td>
+		<td><a href="{% url 'delete' i.id %}" class="btn btn-success">delete</a></td>
+ 		
+ 		
+ 	</tr>
+ 	{% endfor %}
+ 	
+
+ </table>
+ <a href="{% static 'ksrm/diplay.html' %}" download>
+ <button type="button" class="btn btn-success btn-lg" style="float: right;" >Download</button>
+</a>
+</body>
+</html>0

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>signup</title>
+	<link rel="shortcut icon" type="image/png" href="{% static 'images/icon.jpg' %}"/ sizes="16*16">
+		
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+</head>
+<center><body style="background-color: orange">
+<h1 style='text-align: center;color: red'>
+	<b>	Enter Your Details</b> 
+</h1>
+<form action='{% url "submit" %}' method='POST'>
+	{% csrf_token %}
+	{{ formfields.as_p }}
+	<button type="submit" class="btn btn-success"> Submit</button>
+
+
+</form>
+</center>
+</body>
+</html>

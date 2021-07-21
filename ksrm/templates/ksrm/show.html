@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show</title>
+</head>
+<body>
+<table border="3 " align="center">
+ 	<tr>
+ 	 	<th style="color: red"><b>Name</th></b>
+ 		<th style="color: red"><b>mobile</th></b>
+ 	</tr>
+ 	{% for i in s %}
+ 	<tr>
+ 		<td>{{ i.name }}</td>
+ 		<td>{{ i.mobile }}</td>
+ 	</tr>
+ 	{% endfor %}
+
+ </table>
+</body>
+</html>
